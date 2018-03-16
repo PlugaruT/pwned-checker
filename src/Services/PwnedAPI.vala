@@ -1,6 +1,7 @@
 public class PwnedAPI : GLib.Object {
     public signal void start_loading ();
     public signal void end_loading ();
+
     private Soup.Session session;
     private string base_url;
 

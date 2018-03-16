@@ -2,7 +2,7 @@ public class MainWindow : Gtk.Window {
     private PwnedAPI api;
     private Gtk.Image password_response_icon;
     private Gtk.Label password_response_label;
-    private Gtk.Revealer spinner_revealer;
+    private Gtk.Spinner spinner;
 
     public MainWindow (Gtk.Application application) {
     Object (
@@ -16,19 +16,11 @@ public class MainWindow : Gtk.Window {
     }
 
     construct {
+        spinner = new Gtk.Spinner ();
+
         api = new PwnedAPI ();
         api.start_loading.connect (show_spinner);
         api.end_loading.connect (hide_spinner);
-
-        spinner_revealer = new Gtk.Revealer ();
-        spinner_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
-
-        var spinner = new Gtk.Spinner ();
-        spinner.active = true;
-
-        spinner_revealer.add (spinner);
-        spinner_revealer.reveal_child = false;
-
 
         var main_layout = new Gtk.Grid ();
         main_layout.hexpand = true;
@@ -73,9 +65,16 @@ public class MainWindow : Gtk.Window {
         main_layout.attach (password_response_icon, 0, 3, 1, 1);
         main_layout.attach (password_response_label, 1, 3, 1, 1);
         main_layout.attach (check_button, 0, 4, 2, 1);
-        main_layout.attach (spinner_revealer, 0, 5, 2, 1);
 
-        set_titlebar (create_headerbar ());
+        var header = new Gtk.HeaderBar ();
+        header.show_close_button = true;
+        header.pack_end (spinner);
+        var header_context = header.get_style_context ();
+        header_context.add_class ("titlebar");
+        header_context.add_class ("default-decoration");
+        header_context.add_class (Gtk.STYLE_CLASS_FLAT);
+
+        set_titlebar (header);
         add (main_layout);
     }
 
@@ -84,21 +83,10 @@ public class MainWindow : Gtk.Window {
     }
 
     private void show_spinner () {
-        spinner_revealer.reveal_child = true;
+        spinner.start ();
     }
 
     private void hide_spinner () {
-        spinner_revealer.reveal_child = false;
+        spinner.stop ();
     }
-
-    private Gtk.HeaderBar create_headerbar () {
-        var header = new Gtk.HeaderBar ();
-        header.show_close_button = true;
-        var header_context = header.get_style_context ();
-        header_context.add_class ("titlebar");
-        header_context.add_class ("default-decoration");
-        header_context.add_class (Gtk.STYLE_CLASS_FLAT);
-        return header;
-    }
-
 }
