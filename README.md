@@ -5,6 +5,7 @@ Simple application for checking if a password is foud in [Pwned Passwords reposi
 <div style="text-align:center">
     ![Screenshot](data/screenshot_0.png)
 </div>
+
 ## Building and Installation
 
 You'll need the following dependencies:
