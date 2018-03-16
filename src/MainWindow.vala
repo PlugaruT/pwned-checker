@@ -1,117 +1,104 @@
 public class MainWindow : Gtk.Window {
     private PwnedAPI api;
+    private Gtk.Image password_response_icon;
     private Gtk.Label password_response_label;
-    private Gtk.Label email_response_label;
+    private Gtk.Revealer spinner_revealer;
 
-  public MainWindow (Gtk.Application application) {
+    public MainWindow (Gtk.Application application) {
     Object (
-        application: application,
-        border_width: 0,
-        icon_name: "com.github.plugarut.pwned-checker",
-        resizable: false,
-        title: _("Pwned Checker"),
-        window_position: Gtk.WindowPosition.CENTER
-    );
-    api = new PwnedAPI();
-  }
+            application: application,
+            border_width: 0,
+            icon_name: "com.github.plugarut.pwned-checker",
+            resizable: false,
+            title: _("Pwned Checker"),
+            window_position: Gtk.WindowPosition.CENTER
+        );
+    }
 
-  construct {
-    var header = new Gtk.HeaderBar ();
-    header.show_close_button = true;
-    var header_context = header.get_style_context ();
-    header_context.add_class ("titlebar");
-    header_context.add_class ("default-decoration");
-    header_context.add_class (Gtk.STYLE_CLASS_FLAT);
+    construct {
+        api = new PwnedAPI ();
+        api.start_loading.connect (show_spinner);
+        api.end_loading.connect (hide_spinner);
 
-    var main_layout = new Gtk.Grid ();
-    main_layout.column_spacing = 6;
-    main_layout.height_request = 260;
-    main_layout.row_spacing = 6;
-    main_layout.width_request = 400;
+        spinner_revealer = new Gtk.Revealer ();
+        spinner_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN;
 
-    password_response_label = create_label(_("Enter password to be checked!"));
-    email_response_label = create_label(_("Enter email to be checked!"));
+        var spinner = new Gtk.Spinner ();
+        spinner.active = true;
 
-    var header_grid = create_grid ();
-    header_grid.height_request = 60;
-    header_grid.margin = 5;
-    header_grid.margin_start = 50;
-    header_grid.margin_end = 50;
-
-    var password_grid = create_grid ();
-    password_grid.column_spacing = 6;
-    password_grid.height_request = 60;
-
-    var email_grid = create_grid ();
-    email_grid.column_spacing = 6;
-    email_grid.height_request = 60;
-
-    var password_entry = new Gtk.Entry();
-    password_entry.hexpand = true;
-    password_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "image-red-eye-symbolic");
-    password_entry.placeholder_text = _("Password");
-    password_entry.set_visibility(false);
-    password_entry.icon_press.connect(() => {
-        password_entry.set_visibility(!password_entry.visibility);
-    });
-
-    var email_entry = new Gtk.Entry();
-    email_entry.hexpand = true;
-    email_entry.placeholder_text = _("test@email.com");
+        spinner_revealer.add (spinner);
+        spinner_revealer.reveal_child = false;
 
 
-    var check_button = new Gtk.Button.with_label (_("Check!"));
-    check_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-    check_button.sensitive = true;
-    check_button.margin_start = 40;
-    check_button.margin_end = 40;
-    check_button.clicked.connect(() => {
-       if(api.check_password(password_entry.text.to_string())){
-            password_response_label.set_label("pwned");
-       } else {
-            password_response_label.set_label("not pwned");
-       }
+        var main_layout = new Gtk.Grid ();
+        main_layout.hexpand = true;
+        main_layout.margin = 20;
+        main_layout.column_spacing = 6;
+        main_layout.row_spacing = 12;
 
-    });
+        password_response_label = new Gtk.Label (_("Enter password to be checked!"));
+        password_response_label.hexpand = true;
+        password_response_icon = new Gtk.Image.from_icon_name ("dialog-information", Gtk.IconSize.INVALID);
+        password_response_icon.pixel_size = 32;
 
+        var password_entry = new Gtk.Entry ();
+        password_entry.hexpand = true;
+        password_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "image-red-eye-symbolic");
+        password_entry.placeholder_text = _("Password");
+        password_entry.set_visibility (false);
+        password_entry.icon_press.connect ( () => {
+            password_entry.set_visibility (!password_entry.visibility);
+        });
 
+        var check_button = new Gtk.Button.with_label (_("Check!"));
+        check_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        check_button.sensitive = true;
+        check_button.clicked.connect ( () => {
+            var password_check = api.check_password (password_entry.text.to_string());
+            if (password_check != "-1") {
+                switch_icon("dialog-error");
+                password_response_label.set_label (_("Youre password was pwned %s times!").printf (password_check));
+            } else {
+                switch_icon("process-completed");
+                password_response_label.set_label (_("You can stay calm, the password is good!"));
+            }
+        });
 
-    var header_label = new Gtk.Label(_("Please enter password or email you want to be checked on <a href='haveibeenpwned.com'>haveibeenpwned.com</a>"));
-    header_label.margin_top = 10;
-    header_label.set_use_markup (true);
-    header_label.set_line_wrap (true);
+        var header_label = new Gtk.Label (_("Please enter password you want to be checked on <a href='haveibeenpwned.com'>haveibeenpwned.com</a>"));
+        header_label.set_use_markup (true);
+        header_label.set_line_wrap (true);
 
+        main_layout.attach (header_label, 0, 1, 2, 1);
+        main_layout.attach (password_entry, 0, 2, 2, 1);
+        main_layout.attach (password_response_icon, 0, 3, 1, 1);
+        main_layout.attach (password_response_label, 1, 3, 1, 1);
+        main_layout.attach (check_button, 0, 4, 2, 1);
+        main_layout.attach (spinner_revealer, 0, 5, 2, 1);
 
-    header_grid.attach (header_label, 0, 1, 1, 1);
+        set_titlebar (create_headerbar ());
+        add (main_layout);
+    }
 
-    password_grid.attach (password_entry, 0, 1, 1, 1);
-    password_grid.attach (password_response_label, 0, 2, 1, 1);
+    private void switch_icon (string icon_name) {
+        password_response_icon.icon_name = icon_name;
+    }
 
-    email_grid.attach (email_entry, 0, 1, 1, 1);
-    email_grid.attach (email_response_label, 0, 2, 1, 1);
+    private void show_spinner () {
+        spinner_revealer.reveal_child = true;
+    }
 
-    main_layout.attach (header_grid, 1, 1, 2, 1);
-    main_layout.attach (password_grid, 1, 2, 1 ,1);
-    main_layout.attach (email_grid, 2, 2, 1, 1);
-    main_layout.attach (check_button, 1, 3, 2, 1);
+    private void hide_spinner () {
+        spinner_revealer.reveal_child = false;
+    }
 
-    set_titlebar (header);
-    add (main_layout);
-  }
-
-  private Gtk.Label create_label (string lbl) {
-    var label = new Gtk.Label(lbl);
-    label.margin_top = 5;
-    label.margin_start = 40;
-    label.margin_end = 40;
-    return label;
-  }
-
-  private Gtk.Grid create_grid () {
-    var grid = new Gtk.Grid ();
-    grid.margin = 20;
-    grid.hexpand = true;
-    return grid;
-  }
+    private Gtk.HeaderBar create_headerbar () {
+        var header = new Gtk.HeaderBar ();
+        header.show_close_button = true;
+        var header_context = header.get_style_context ();
+        header_context.add_class ("titlebar");
+        header_context.add_class ("default-decoration");
+        header_context.add_class (Gtk.STYLE_CLASS_FLAT);
+        return header;
+    }
 
 }
