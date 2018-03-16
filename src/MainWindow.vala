@@ -49,7 +49,7 @@ public class MainWindow : Gtk.Window {
             var password_check = api.check_password (password_entry.text.to_string());
             if (password_check != "-1") {
                 switch_icon("dialog-error");
-                password_response_label.set_label (_("Youre password was pwned %s times!").printf (password_check));
+                password_response_label.set_label (_("Your password was pwned %s times!").printf (password_check));
             } else {
                 switch_icon("process-completed");
                 password_response_label.set_label (_("You can stay calm, the password is good!"));
