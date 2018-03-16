@@ -2,7 +2,7 @@
 
 Simple application for checking if a password is foud in [Pwned Passwords repository](https://haveibeenpwned.com/)
 
-![Screenshot](data/screenshot.png)
+![Screenshot](data/screenshot_0.png)
 
 ## Building and Installation
 

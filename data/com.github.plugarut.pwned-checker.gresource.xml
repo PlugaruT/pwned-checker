@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/com/github/plugarut/pwned-checker">
+    <file alias="com.github.plugarut.pwned-checker.svg">icons/128/com.github.plugarut.pwned-checker.svg</file>
+  </gresource>
+</gresources>
