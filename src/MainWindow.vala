@@ -156,8 +156,13 @@ public class MainWindow : Gtk.Window {
     }
 
     private void handle_email_response () {
-        var email_check = api.check_email (email_entry.text.to_string());
-        warning (email_check);
-
+        var email_check = api.check_account (email_entry.text.to_string());
+        if (email_check != "-1") {
+            switch_icon(email_response_icon, "dialog-error");
+            email_response_label.set_label (_("Your account was involved in %s breaches!").printf (email_check));
+        } else {
+            switch_icon(email_response_icon, "process-completed");
+            email_response_label.set_label (_("Congratulations, you were carefully enough till now!"));
+        }
     }
 }

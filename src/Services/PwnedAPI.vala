@@ -23,17 +23,19 @@
 public class PwnedAPI : GLib.Object {
     public signal void start_loading ();
     public signal void end_loading ();
+    public Soup.Session session;
 
     private string base_url;
 
     construct {
+        session = new Soup.Session ();
+        session.user_agent = "com.github.plugarut.pwned-checker";
         base_url = "https://api.pwnedpasswords.com/";
     }
 
 
     public string check_password (string password) {
         start_loading ();
-        var session = new Soup.Session();
         var pwned_count = "-1"; //handle this to return int
         var url = "%spwnedpassword/%s".printf(base_url, password);
         var message = new Soup.Message ("GET", url);
@@ -46,64 +48,45 @@ public class PwnedAPI : GLib.Object {
         return pwned_count;
     }
 
-    public int check_account (string email) {
+    public string check_account (string email) {
         start_loading ();
-        var session = new Soup.Session();
-        var counter = 0;
+        var response = "-1";
 
-        var url = "https://haveibeenpwned.com/api/v2/breachedaccount/%s".printf(email);
-        warning (url);
+        var url = "https://haveibeenpwned.com/api/v2/breachedaccount/%s?truncateResponse=true".printf(email);
         var message = new Soup.Message ("GET", url);
         session.send_message (message);
-        warning ("here");
-        warning ("%u".printf(message.status_code));
 
         if (message.status_code == 200) {
             end_loading ();
-            warning ("message ok");
+            var parser = new Json.Parser();
             try {
-                warning ("here %s".printf((string)message.response_body.flatten ()));
-                var parser = new Json.Parser();
                 parser.load_from_data ((string) message.response_body.flatten ().data, -1);
-                warning ((string)message.response_body.flatten ());
-                var root_object = parser.get_root ().get_object();
-
-
             } catch (Error e) {
                 warning ("Failed to connect to service: %s", e.message);
             }
-        } else {
-            warning ("not ok");
+
+            var root = parser.get_root ();
+            var array = root.get_array ();
+            response = array.get_length ().to_string ();
+            /*
+            for (var i = 0; i < array.get_length (); i++) {
+                // Get the nth object, skipping unexpected elements
+                var node = array.get_element (i);
+                if (node.get_node_type () != Json.NodeType.OBJECT) {
+                    continue;
+                }
+
+                // Get the package name and number of ratings from the object - skip if has no name
+                var object = node.get_object ();
+                var package_name = object.get_string_member ("Name");
+                if (package_name != null){
+                    warning((string)package_name);
+                }
+            }*/
+
         }
-        return counter;
+        return response;
     }
+
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
