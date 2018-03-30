@@ -48,9 +48,9 @@ public class PwnedAPI : GLib.Object {
         return pwned_count;
     }
 
-    public string check_account (string email) {
+    public string[] check_account (string email) {
         start_loading ();
-        var response = "-1";
+        string[] response = {};
 
         var url = "https://haveibeenpwned.com/api/v2/breachedaccount/%s?truncateResponse=true".printf(email);
         var message = new Soup.Message ("GET", url);
@@ -67,8 +67,7 @@ public class PwnedAPI : GLib.Object {
 
             var root = parser.get_root ();
             var array = root.get_array ();
-            response = array.get_length ().to_string ();
-            /*
+
             for (var i = 0; i < array.get_length (); i++) {
                 // Get the nth object, skipping unexpected elements
                 var node = array.get_element (i);
@@ -76,13 +75,13 @@ public class PwnedAPI : GLib.Object {
                     continue;
                 }
 
-                // Get the package name and number of ratings from the object - skip if has no name
                 var object = node.get_object ();
                 var package_name = object.get_string_member ("Name");
                 if (package_name != null){
+                    response += package_name;
                     warning((string)package_name);
                 }
-            }*/
+            }
 
         }
         return response;
