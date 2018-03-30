@@ -1,10 +1,10 @@
-wingpanel-indicator-sys-monitor (0.1.1) xenial; urgency=medium
+com.github.plugarut.pwned-checker (0.1.1) xenial; urgency=medium
 
   * Fix dependency
 
  -- Tudor Plugaru <plugaru.tudor@gmail.com>  Mon, 30 Mar 2018  18:45:00 +0300
 
-wingpanel-indicator-sys-monitor (0.1.0) xenial; urgency=medium
+com.github.plugarut.pwned-checker (0.1.0) xenial; urgency=medium
 
   * Initial release.
 
