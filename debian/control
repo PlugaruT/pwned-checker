@@ -2,15 +2,13 @@ Source: com.github.plugarut.pwned-checker
 Section: x11
 Priority: extra
 Maintainer: Tudor Plugaru <plugaru.tudor@gmail.com>
-Build-Depends: appstream,
+Build-Depends: meson,
+               valac (>= 0.26),
                debhelper (>= 9),
-               desktop-file-utils,
-               libgranite-dev,
                libgtk-3-dev,
-               libsoup-2.4-dev,
-               libjson-glib-dev (>= 0.10),
-               meson,
-               valac
+               libgranite-dev (>= 0.3.0),
+               libsoup2.4-dev (>= 2.25.2),
+               libjson-glib-dev (>= 0.10)
 
 Standards-Version: 3.9.3
 Package: com.github.plugarut.pwned-checker
