@@ -24,17 +24,16 @@ public class PwnedAPI : GLib.Object {
     public signal void start_loading ();
     public signal void end_loading ();
 
-    private Soup.Session session;
     private string base_url;
 
     construct {
-        session = new Soup.Session();
         base_url = "https://api.pwnedpasswords.com/";
     }
 
 
     public string check_password (string password) {
         start_loading ();
+        var session = new Soup.Session();
         var pwned_count = "-1"; //handle this to return int
         var url = "%spwnedpassword/%s".printf(base_url, password);
         var message = new Soup.Message ("GET", url);
@@ -46,4 +45,65 @@ public class PwnedAPI : GLib.Object {
         end_loading ();
         return pwned_count;
     }
+
+    public int check_account (string email) {
+        start_loading ();
+        var session = new Soup.Session();
+        var counter = 0;
+
+        var url = "https://haveibeenpwned.com/api/v2/breachedaccount/%s".printf(email);
+        warning (url);
+        var message = new Soup.Message ("GET", url);
+        session.send_message (message);
+        warning ("here");
+        warning ("%u".printf(message.status_code));
+
+        if (message.status_code == 200) {
+            end_loading ();
+            warning ("message ok");
+            try {
+                warning ("here %s".printf((string)message.response_body.flatten ()));
+                var parser = new Json.Parser();
+                parser.load_from_data ((string) message.response_body.flatten ().data, -1);
+                warning ((string)message.response_body.flatten ());
+                var root_object = parser.get_root ().get_object();
+
+
+            } catch (Error e) {
+                warning ("Failed to connect to service: %s", e.message);
+            }
+        } else {
+            warning ("not ok");
+        }
+        return counter;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
