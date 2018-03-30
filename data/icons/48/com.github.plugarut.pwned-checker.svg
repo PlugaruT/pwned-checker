@@ -13,7 +13,7 @@
    width="48"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="48.svg">
+   sodipodi:docname="com.github.plugarut.pwned-checker.svg">
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -27,13 +27,15 @@
      inkscape:window-height="1017"
      id="namedview45"
      showgrid="true"
-     inkscape:zoom="8"
-     inkscape:cx="20.777913"
-     inkscape:cy="19.492052"
+     inkscape:zoom="22.627417"
+     inkscape:cx="11.316569"
+     inkscape:cy="26.272539"
      inkscape:window-x="0"
      inkscape:window-y="30"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg4405">
+     inkscape:current-layer="svg4405"
+     showguides="true"
+     inkscape:guide-bbox="true">
     <inkscape:grid
        type="xygrid"
        id="grid4182"
@@ -48,6 +50,34 @@
        opacity="0.31372549"
        empcolor="#3fffff"
        empopacity="0.11764706" />
+    <sodipodi:guide
+       position="0,0"
+       orientation="0,48"
+       id="guide3371" />
+    <sodipodi:guide
+       position="48,0"
+       orientation="-48,0"
+       id="guide3373" />
+    <sodipodi:guide
+       position="48,48"
+       orientation="0,-48"
+       id="guide3375" />
+    <sodipodi:guide
+       position="0,48"
+       orientation="48,0"
+       id="guide3377" />
+    <sodipodi:guide
+       position="24,24"
+       orientation="1,0"
+       id="guide3379"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="24,24"
+       orientation="0,1"
+       id="guide3381"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
   </sodipodi:namedview>
   <defs
      id="defs4407">
@@ -202,7 +232,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -263,4 +293,16 @@
        id="rect5505-21-6"
        style="opacity:0.5;color:#000000;fill:none;stroke:#0e141f;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
   </g>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:100%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="22.301777"
+     y="30.802317"
+     id="text3383"
+     sodipodi:linespacing="100%"><tspan
+       sodipodi:role="line"
+       id="tspan3385"
+       x="22.301777"
+       y="30.802317"
+       style="font-size:25px;fill:#ffffff">';--</tspan></text>
 </svg>

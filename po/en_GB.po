@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.plugarut.pwned-checker\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-16 19:17+0200\n"
+"POT-Creation-Date: 2018-03-30 17:32+0300\n"
 "PO-Revision-Date: 2018-03-16 18:55+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -17,35 +17,54 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/MainWindow.vala:13
+#: src/MainWindow.vala:41
 msgid "Pwned Checker"
 msgstr "Pwned Checker"
 
-#: src/MainWindow.vala:31
+#: src/MainWindow.vala:59
+#, fuzzy
+msgid ""
+"Please enter password or email you want to be checked on <a "
+"href='haveibeenpwned.com'>haveibeenpwned.com</a>"
+msgstr ""
+"Please enter password you want to be checked on <a href='haveibeenpwned."
+"com'>haveibeenpwned.com</a>"
+
+#: src/MainWindow.vala:64
 msgid "Enter password to be checked!"
 msgstr "Enter password to be checked!"
 
-#: src/MainWindow.vala:39
+#: src/MainWindow.vala:71
 msgid "Password"
 msgstr "Password"
 
-#: src/MainWindow.vala:45
+#: src/MainWindow.vala:83
+msgid "Email"
+msgstr ""
+
+#: src/MainWindow.vala:86
+#, fuzzy
+msgid "Enter email to be checked!"
+msgstr "Enter password to be checked!"
+
+#: src/MainWindow.vala:93
 msgid "Check!"
 msgstr "Check!"
 
-#: src/MainWindow.vala:52
+#: src/MainWindow.vala:151
 #, fuzzy, c-format
 msgid "Your password was pwned %s times!"
 msgstr "Youre password was pwned %s times!"
 
-#: src/MainWindow.vala:55
+#: src/MainWindow.vala:154
 msgid "You can stay calm, the password is good!"
 msgstr "You can stay calm, the password is good!"
 
-#: src/MainWindow.vala:59
-msgid ""
-"Please enter password you want to be checked on <a href='haveibeenpwned."
-"com'>haveibeenpwned.com</a>"
+#: src/MainWindow.vala:162
+#, c-format
+msgid "Your account was involved in %s breaches!"
 msgstr ""
-"Please enter password you want to be checked on <a href='haveibeenpwned."
-"com'>haveibeenpwned.com</a>"
+
+#: src/MainWindow.vala:166
+msgid "Congratulations, you were carefully enough!"
+msgstr ""

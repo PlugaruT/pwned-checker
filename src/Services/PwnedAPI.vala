@@ -23,12 +23,13 @@
 public class PwnedAPI : GLib.Object {
     public signal void start_loading ();
     public signal void end_loading ();
+    public Soup.Session session;
 
-    private Soup.Session session;
     private string base_url;
 
     construct {
-        session = new Soup.Session();
+        session = new Soup.Session ();
+        session.user_agent = "com.github.plugarut.pwned-checker";
         base_url = "https://api.pwnedpasswords.com/";
     }
 
@@ -46,4 +47,44 @@ public class PwnedAPI : GLib.Object {
         end_loading ();
         return pwned_count;
     }
+
+    public string[] check_account (string email) {
+        start_loading ();
+        string[] response = {};
+
+        var url = "https://haveibeenpwned.com/api/v2/breachedaccount/%s?truncateResponse=true".printf(email);
+        var message = new Soup.Message ("GET", url);
+        session.send_message (message);
+
+        if (message.status_code == 200) {
+            end_loading ();
+            var parser = new Json.Parser();
+            try {
+                parser.load_from_data ((string) message.response_body.flatten ().data, -1);
+            } catch (Error e) {
+                warning ("Failed to connect to service: %s", e.message);
+            }
+
+            var root = parser.get_root ();
+            var array = root.get_array ();
+
+            for (var i = 0; i < array.get_length (); i++) {
+                // Get the nth object, skipping unexpected elements
+                var node = array.get_element (i);
+                if (node.get_node_type () != Json.NodeType.OBJECT) {
+                    continue;
+                }
+
+                var object = node.get_object ();
+                var name = object.get_string_member ("Name");
+                if (name != null){
+                    response += name;
+                }
+            }
+
+        }
+        return response;
+    }
+
+
 }

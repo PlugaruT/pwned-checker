@@ -13,7 +13,7 @@
    width="32"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="32.svg">
+   sodipodi:docname="com.github.plugarut.pwned-checker.svg">
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -27,13 +27,15 @@
      inkscape:window-height="1017"
      id="namedview46"
      showgrid="true"
-     inkscape:zoom="16"
-     inkscape:cx="14.93666"
-     inkscape:cy="15.588816"
+     inkscape:zoom="32"
+     inkscape:cx="9.5059596"
+     inkscape:cy="16.854866"
      inkscape:window-x="0"
      inkscape:window-y="30"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg4588">
+     inkscape:current-layer="svg4588"
+     showguides="true"
+     inkscape:guide-bbox="true">
     <inkscape:grid
        type="xygrid"
        id="grid4203"
@@ -48,6 +50,50 @@
        opacity="0.37254902"
        empcolor="#3fffff"
        empopacity="0.1254902" />
+    <sodipodi:guide
+       position="0,0"
+       orientation="0,32"
+       id="guide4242" />
+    <sodipodi:guide
+       position="32,0"
+       orientation="-32,0"
+       id="guide4244" />
+    <sodipodi:guide
+       position="32,32"
+       orientation="0,-32"
+       id="guide4246" />
+    <sodipodi:guide
+       position="0,32"
+       orientation="32,0"
+       id="guide4248" />
+    <sodipodi:guide
+       position="0,0"
+       orientation="0,32"
+       id="guide4250" />
+    <sodipodi:guide
+       position="32,0"
+       orientation="-32,0"
+       id="guide4252" />
+    <sodipodi:guide
+       position="32,32"
+       orientation="0,-32"
+       id="guide4254" />
+    <sodipodi:guide
+       position="0,32"
+       orientation="32,0"
+       id="guide4256" />
+    <sodipodi:guide
+       position="16,16"
+       orientation="1,0"
+       id="guide4258"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="16,16"
+       orientation="0,1"
+       id="guide4260"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
   </sodipodi:namedview>
   <defs
      id="defs4590">
@@ -202,7 +248,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -268,4 +314,16 @@
        height="27"
        width="27" />
   </g>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:100%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="14.9375"
+     y="20.6875"
+     id="text4238"
+     sodipodi:linespacing="100%"><tspan
+       sodipodi:role="line"
+       id="tspan4240"
+       x="14.9375"
+       y="20.6875"
+       style="font-size:17.5px;fill:#ffffff">';--</tspan></text>
 </svg>
