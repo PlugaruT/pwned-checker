@@ -160,10 +160,10 @@ public class MainWindow : Gtk.Window {
         if (breaches.length > 0) {
             switch_icon(email_response_icon, "dialog-error");
             email_response_label.set_label (_("Your account was involved in %s breaches!").printf (breaches.length.to_string ()));
-            email_response_label.set_tooltip_text (string.joinv(", ", breaches));
+            email_response_label.set_tooltip_text (string.joinv("\n", breaches));
         } else {
             switch_icon(email_response_icon, "process-completed");
-            email_response_label.set_label (_("Congratulations, you were carefully enough till now!"));
+            email_response_label.set_label (_("Congratulations, you were carefully enough!"));
         }
     }
 }

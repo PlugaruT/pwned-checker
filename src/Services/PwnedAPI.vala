@@ -76,10 +76,9 @@ public class PwnedAPI : GLib.Object {
                 }
 
                 var object = node.get_object ();
-                var package_name = object.get_string_member ("Name");
-                if (package_name != null){
-                    response += package_name;
-                    warning((string)package_name);
+                var name = object.get_string_member ("Name");
+                if (name != null){
+                    response += name;
                 }
             }
 

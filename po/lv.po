@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.plugarut.pwned-checker\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-30 10:49+0300\n"
+"POT-Creation-Date: 2018-03-30 17:32+0300\n"
 "PO-Revision-Date: 2018-03-16 18:55+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -62,6 +62,6 @@ msgstr ""
 msgid "Your account was involved in %s breaches!"
 msgstr ""
 
-#: src/MainWindow.vala:165
-msgid "Congratulations, you were carefully enough till now!"
+#: src/MainWindow.vala:166
+msgid "Congratulations, you were carefully enough!"
 msgstr ""
