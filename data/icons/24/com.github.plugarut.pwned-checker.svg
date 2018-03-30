@@ -13,7 +13,7 @@
    width="24"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="24.svg">
+   sodipodi:docname="com.github.plugarut.pwned-checker.svg">
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -27,13 +27,15 @@
      inkscape:window-height="1017"
      id="namedview46"
      showgrid="true"
-     inkscape:zoom="16"
-     inkscape:cx="13.796158"
-     inkscape:cy="9.3530973"
+     inkscape:zoom="32"
+     inkscape:cx="7.1703395"
+     inkscape:cy="9.9509091"
      inkscape:window-x="0"
      inkscape:window-y="30"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg4157">
+     inkscape:current-layer="svg4157"
+     showguides="true"
+     inkscape:guide-bbox="true">
     <inkscape:grid
        type="xygrid"
        id="grid4179"
@@ -48,6 +50,34 @@
        opacity="0.1254902"
        empcolor="#3ff9ff"
        empopacity="0.11764706" />
+    <sodipodi:guide
+       position="0,0"
+       orientation="0,24"
+       id="guide4448" />
+    <sodipodi:guide
+       position="24,0"
+       orientation="-24,0"
+       id="guide4450" />
+    <sodipodi:guide
+       position="24,24"
+       orientation="0,-24"
+       id="guide4452" />
+    <sodipodi:guide
+       position="0,24"
+       orientation="24,0"
+       id="guide4454" />
+    <sodipodi:guide
+       position="12,12"
+       orientation="1,0"
+       id="guide4456"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="12,12"
+       orientation="0,1"
+       id="guide4458"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
   </sodipodi:namedview>
   <defs
      id="defs4159">
@@ -202,7 +232,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -266,4 +296,16 @@
        height="17"
        width="17" />
   </g>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:100%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="11.3125"
+     y="14.6875"
+     id="text4444"
+     sodipodi:linespacing="100%"><tspan
+       sodipodi:role="line"
+       id="tspan4446"
+       x="11.3125"
+       y="14.6875"
+       style="font-size:10px;fill:#ffffff">';--</tspan></text>
 </svg>

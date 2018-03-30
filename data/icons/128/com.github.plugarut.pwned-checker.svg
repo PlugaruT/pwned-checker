@@ -13,7 +13,7 @@
    width="128"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="128.svg">
+   sodipodi:docname="com.github.plugarut.pwned-checker.svg">
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -28,12 +28,14 @@
      id="namedview51"
      showgrid="true"
      inkscape:zoom="4"
-     inkscape:cx="45.346028"
+     inkscape:cx="3.721028"
      inkscape:cy="58.167351"
      inkscape:window-x="0"
      inkscape:window-y="30"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg4379">
+     inkscape:current-layer="svg4379"
+     showguides="true"
+     inkscape:guide-bbox="true">
     <inkscape:grid
        type="xygrid"
        id="grid4190"
@@ -48,6 +50,34 @@
        opacity="0.1254902"
        empcolor="#3fffff"
        empopacity="0.10196078" />
+    <sodipodi:guide
+       position="0,0"
+       orientation="0,128"
+       id="guide3626" />
+    <sodipodi:guide
+       position="128,0"
+       orientation="-128,0"
+       id="guide3628" />
+    <sodipodi:guide
+       position="128,128"
+       orientation="0,-128"
+       id="guide3630" />
+    <sodipodi:guide
+       position="0,128"
+       orientation="128,0"
+       id="guide3632" />
+    <sodipodi:guide
+       position="64,64"
+       orientation="1,0"
+       id="guide3634"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="-64,64"
+       orientation="0,1"
+       id="guide3636"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
   </sodipodi:namedview>
   <defs
      id="defs4381">
@@ -293,4 +323,15 @@
        height="103"
        width="103" />
   </g>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="39.5"
+     y="74.75"
+     id="text3638"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3640"
+       x="39.5"
+       y="74.75">';--</tspan></text>
 </svg>
