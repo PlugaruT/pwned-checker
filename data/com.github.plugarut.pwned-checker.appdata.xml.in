@@ -13,6 +13,14 @@
     <binary>com.github.plugarut.pwned-checker</binary>
   </provides>
   <releases>
+    <release version="0.1.7" date="2018-03-31">
+      <description>
+        <ul>
+            <li>Fix appdata file.</li>
+            <li>Update screenshots.</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.1.6" date="2018-03-30">
       <description>
         <p>Initial Release to AppCenter</p>
