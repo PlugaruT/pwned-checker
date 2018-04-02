@@ -1,8 +1,17 @@
-# Pwned Checker
+[![Build Status](https://travis-ci.org/PlugaruT/pwned-checker.svg?branch=master)](https://travis-ci.org/PlugaruT/pwned-checker)
 
-Simple application for checking if a password is foud in [Pwned Passwords repository](https://haveibeenpwned.com/)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/PlugaruT/pwned-checker/master/data/icons/128/com.github.plugarut.pwned-checker.svg" alt="Icon" />
+</p>
+<h1 align="center">Pwned Checker</h1>
+<p align="center">
+  <a href="https://appcenter.elementary.io/com.github.plugarut.pwned-checker"><img src="https://appcenter.elementary.io/badge.svg?new" alt="Get it on AppCenter" /></a>
+</p>
 
-![Screenshot](data/screenshot_0.png)
+<p align="center"><img src="https://github.com/PlugaruT/pwned-checker/blob/master/data/screenshot_0.png" alt="Screenshot" />
+</p>
+
+Simple application for interacting with [haveibeenpwned](https://haveibeenpwned.com/) API.
 
 ## Building and Installation
 

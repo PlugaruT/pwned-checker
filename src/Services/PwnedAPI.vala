@@ -1,4 +1,4 @@
- /*-
+/*-
  * Copyright (c) 2018 Tudor Plugaru (https://github.com/PlugaruT/pwned-checker)
  *
  * This library is free software; you can redistribute it and/or
@@ -21,8 +21,8 @@
 
 
 public class PwnedAPI : GLib.Object {
-    public signal void start_loading ();
-    public signal void end_loading ();
+    public signal bool start_loading ();
+    public signal bool end_loading ();
     public Soup.Session session;
 
     private string base_url;
@@ -34,33 +34,33 @@ public class PwnedAPI : GLib.Object {
     }
 
 
-    public string check_password (string password) {
+    public int check_password (string password) {
         start_loading ();
-        var pwned_count = "-1"; //handle this to return int
-        var url = "%spwnedpassword/%s".printf(base_url, password);
+        var pwned_count = -1;
+        var url = "%spwnedpassword/%s".printf (base_url, password);
         var message = new Soup.Message ("GET", url);
         session.send_message (message);
         if (message.status_code == 200) {
             end_loading ();
-            pwned_count = (string) message.response_body.flatten ().data; // if I cast this to int, it acts weird, check this.
+            pwned_count = int.parse ((string)message.response_body.flatten ().data);
         }
-        end_loading ();
+            end_loading ();
         return pwned_count;
     }
 
     public string[] check_account (string email) {
         start_loading ();
-        string[] response = {};
+        string[] response = { };
 
-        var url = "https://haveibeenpwned.com/api/v2/breachedaccount/%s?truncateResponse=true".printf(email);
+        var url = "https://haveibeenpwned.com/api/v2/breachedaccount/%s?truncateResponse=true".printf (email);
         var message = new Soup.Message ("GET", url);
         session.send_message (message);
 
         if (message.status_code == 200) {
             end_loading ();
-            var parser = new Json.Parser();
+            var parser = new Json.Parser ();
             try {
-                parser.load_from_data ((string) message.response_body.flatten ().data, -1);
+                parser.load_from_data ((string)message.response_body.flatten ().data, -1);
             } catch (Error e) {
                 warning ("Failed to connect to service: %s", e.message);
             }
@@ -77,14 +77,12 @@ public class PwnedAPI : GLib.Object {
 
                 var object = node.get_object ();
                 var name = object.get_string_member ("Name");
-                if (name != null){
+                if (name != null) {
                     response += name;
                 }
             }
-
         }
+        end_loading ();
         return response;
     }
-
-
 }

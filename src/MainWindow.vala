@@ -47,8 +47,25 @@ public class MainWindow : Gtk.Window {
         spinner = new Gtk.Spinner ();
 
         api = new PwnedAPI ();
-        api.start_loading.connect (show_spinner);
-        api.end_loading.connect (hide_spinner);
+        api.start_loading.connect (
+            () => {
+                warning("asdasdad");
+                Idle.add (
+                    () => {
+                        spinner.active = true;
+                        return false;
+                    });
+            }
+        );
+        api.end_loading.connect (
+            () => {
+                Idle.add (
+                    () => {
+                        spinner.active = false;
+                        return false;
+                    });
+            }
+        );
 
         var main_layout = new Gtk.Grid ();
         main_layout.hexpand = true;
@@ -114,7 +131,7 @@ public class MainWindow : Gtk.Window {
 
         var header = new Gtk.HeaderBar ();
         header.show_close_button = true;
-        header.pack_end (spinner);
+        header.pack_start (spinner);
         var header_context = header.get_style_context ();
         header_context.add_class ("titlebar");
         header_context.add_class ("default-decoration");
@@ -128,12 +145,19 @@ public class MainWindow : Gtk.Window {
         icon.icon_name = icon_name;
     }
 
-    private void show_spinner () {
-        spinner.start ();
+    private bool show_spinner () {
+        warning("show");
+        warning(spinner.visible.to_string());
+        spinner.visible = true;
+        return true;
     }
 
-    private void hide_spinner () {
-        spinner.stop ();
+    private bool hide_spinner () {
+        warning("hide");
+        warning(spinner.visible.to_string());
+        spinner.visible = false;
+        //spinner.stop ();
+        return true;
     }
 
     private void toggle_button_sensitivity () {
@@ -146,9 +170,9 @@ public class MainWindow : Gtk.Window {
 
     private void handle_password_response () {
         var password_check = api.check_password (password_entry.text.to_string());
-        if (password_check != "-1") {
+        if (password_check > 0) {
             switch_icon(password_response_icon, "dialog-error");
-            password_response_label.set_label (_("Your password was pwned %s times!").printf (password_check));
+            password_response_label.set_label (_("Your password was pwned %s times!").printf (password_check.to_string ()));
         } else {
             switch_icon(password_response_icon, "process-completed");
             password_response_label.set_label (_("You can stay calm, the password is good!"));

@@ -1,4 +1,4 @@
- /*-
+/*-
  * Copyright (c) 2018 Tudor Plugaru (https://github.com/PlugaruT/pwned-checker)
  *
  * This library is free software; you can redistribute it and/or
@@ -23,7 +23,7 @@
 public class PwnedChecker : Gtk.Application {
     public PwnedChecker () {
         Object (application_id: "com.github.plugarut.pwned-checker",
-        flags: ApplicationFlags.FLAGS_NONE);
+                flags : ApplicationFlags.FLAGS_NONE);
     }
 
 
@@ -37,10 +37,10 @@ public class PwnedChecker : Gtk.Application {
         add_accelerator ("Escape", "app.quit", null);
 
         quit_action.activate.connect (() => {
-            if (app_window != null) {
-                app_window.destroy ();
-            }
-        });
+                                          if (app_window != null) {
+                                              app_window.destroy ();
+                                          }
+                                      });
     }
 
 
