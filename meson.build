@@ -8,6 +8,10 @@ add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), la
 executable(
     meson.project_name(),
     'src/Services/PwnedAPI.vala',
+    'src/Widgets/HeaderRow.vala',
+    'src/Widgets/PasswordRow.vala',
+    'src/Widgets/AccountRow.vala',
+    'src/Constants/Icons.vala',
     'src/Application.vala',
     'src/MainWindow.vala',
     dependencies: [

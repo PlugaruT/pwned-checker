@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.plugarut.pwned-checker\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-30 17:32+0300\n"
+"POT-Creation-Date: 2018-04-02 23:28+0300\n"
 "PO-Revision-Date: 2018-03-16 18:55+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -17,50 +17,50 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: src/MainWindow.vala:41
+#: src/MainWindow.vala:39
 msgid "Pwned Checker"
 msgstr ""
 
 #: src/MainWindow.vala:59
-msgid ""
-"Please enter password or email you want to be checked on <a "
-"href='haveibeenpwned.com'>haveibeenpwned.com</a>"
-msgstr ""
-
-#: src/MainWindow.vala:64
-msgid "Enter password to be checked!"
-msgstr ""
-
-#: src/MainWindow.vala:71
-msgid "Password"
-msgstr ""
-
-#: src/MainWindow.vala:83
-msgid "Email"
-msgstr ""
-
-#: src/MainWindow.vala:86
-msgid "Enter email to be checked!"
-msgstr ""
-
-#: src/MainWindow.vala:93
 msgid "Check!"
 msgstr ""
 
-#: src/MainWindow.vala:151
+#: src/Widgets/PasswordRow.vala:35
+msgid "Enter password to be checked!"
+msgstr ""
+
+#: src/Widgets/PasswordRow.vala:43
+msgid "Password"
+msgstr ""
+
+#: src/Widgets/PasswordRow.vala:62
 #, c-format
 msgid "Your password was pwned %s times!"
 msgstr ""
 
-#: src/MainWindow.vala:154
+#: src/Widgets/PasswordRow.vala:67
 msgid "You can stay calm, the password is good!"
 msgstr ""
 
-#: src/MainWindow.vala:162
+#: src/Widgets/AccountRow.vala:35
+msgid "Enter email to be checked!"
+msgstr ""
+
+#: src/Widgets/AccountRow.vala:43
+msgid "Email"
+msgstr ""
+
+#: src/Widgets/AccountRow.vala:56
 #, c-format
 msgid "Your account was involved in %s breaches!"
 msgstr ""
 
-#: src/MainWindow.vala:166
-msgid "Congratulations, you were carefully enough!"
+#: src/Widgets/AccountRow.vala:62
+msgid "Congratulations, you were carefully enough !"
+msgstr ""
+
+#: src/Widgets/HeaderRow.vala:31
+msgid ""
+"Please enter password or email you want to be checked on <a "
+"href='haveibeenpwned.com'>haveibeenpwned.com</a>"
 msgstr ""

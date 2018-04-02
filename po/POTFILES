@@ -1,2 +1,5 @@
 src/MainWindow.vala
 src/Application.vala
+src/Widgets/PasswordRow.vala
+src/Widgets/AccountRow.vala
+src/Widgets/HeaderRow.vala

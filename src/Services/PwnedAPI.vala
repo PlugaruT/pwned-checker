@@ -19,70 +19,71 @@
  * Authored by: Tudor Plugaru <plugaru.tudor@gmail.com>
  */
 
+namespace PwnedChecker.Services {
+    public class PwnedAPI : GLib.Object {
+        public signal bool start_loading ();
+        public signal bool end_loading ();
+        public Soup.Session session;
 
-public class PwnedAPI : GLib.Object {
-    public signal bool start_loading ();
-    public signal bool end_loading ();
-    public Soup.Session session;
+        private string base_url;
 
-    private string base_url;
-
-    construct {
-        session = new Soup.Session ();
-        session.user_agent = "com.github.plugarut.pwned-checker";
-        base_url = "https://api.pwnedpasswords.com/";
-    }
-
-
-    public int check_password (string password) {
-        start_loading ();
-        var pwned_count = -1;
-        var url = "%spwnedpassword/%s".printf (base_url, password);
-        var message = new Soup.Message ("GET", url);
-        session.send_message (message);
-        if (message.status_code == 200) {
-            end_loading ();
-            pwned_count = int.parse ((string)message.response_body.flatten ().data);
+        construct {
+            session = new Soup.Session ();
+            session.user_agent = "com.github.plugarut.pwned-checker";
+            base_url = "https://api.pwnedpasswords.com/";
         }
-            end_loading ();
-        return pwned_count;
-    }
 
-    public string[] check_account (string email) {
-        start_loading ();
-        string[] response = { };
 
-        var url = "https://haveibeenpwned.com/api/v2/breachedaccount/%s?truncateResponse=true".printf (email);
-        var message = new Soup.Message ("GET", url);
-        session.send_message (message);
-
-        if (message.status_code == 200) {
-            end_loading ();
-            var parser = new Json.Parser ();
-            try {
-                parser.load_from_data ((string)message.response_body.flatten ().data, -1);
-            } catch (Error e) {
-                warning ("Failed to connect to service: %s", e.message);
+        public int check_password (string password) {
+            start_loading ();
+            var pwned_count = -1;
+            var url = "%spwnedpassword/%s".printf (base_url, password);
+            var message = new Soup.Message ("GET", url);
+            session.send_message (message);
+            if (message.status_code == 200) {
+                end_loading ();
+                pwned_count = int.parse ((string)message.response_body.flatten ().data);
             }
+                end_loading ();
+            return pwned_count;
+        }
 
-            var root = parser.get_root ();
-            var array = root.get_array ();
+        public string[] check_account (string email) {
+            start_loading ();
+            string[] response = { };
 
-            for (var i = 0; i < array.get_length (); i++) {
-                // Get the nth object, skipping unexpected elements
-                var node = array.get_element (i);
-                if (node.get_node_type () != Json.NodeType.OBJECT) {
-                    continue;
+            var url = "https://haveibeenpwned.com/api/v2/breachedaccount/%s?truncateResponse=true".printf (email);
+            var message = new Soup.Message ("GET", url);
+            session.send_message (message);
+
+            if (message.status_code == 200) {
+                end_loading ();
+                var parser = new Json.Parser ();
+                try {
+                    parser.load_from_data ((string)message.response_body.flatten ().data, -1);
+                } catch (Error e) {
+                    warning ("Failed to connect to service: %s", e.message);
                 }
 
-                var object = node.get_object ();
-                var name = object.get_string_member ("Name");
-                if (name != null) {
-                    response += name;
+                var root = parser.get_root ();
+                var array = root.get_array ();
+
+                for (var i = 0; i < array.get_length (); i++) {
+                    // Get the nth object, skipping unexpected elements
+                    var node = array.get_element (i);
+                    if (node.get_node_type () != Json.NodeType.OBJECT) {
+                        continue;
+                    }
+
+                    var object = node.get_object ();
+                    var name = object.get_string_member ("Name");
+                    if (name != null) {
+                        response += name;
+                    }
                 }
             }
+            end_loading ();
+            return response;
         }
-        end_loading ();
-        return response;
     }
 }
