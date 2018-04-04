@@ -2,10 +2,10 @@
 Name=Pwned Checker
 GenericName=Pwned Checker
 Comment=Application for interacting with haveibeenpwned.com API
-Categories=Utility;
+Categories=Utility;Security;
 Exec=com.github.plugarut.pwned-checker
 Icon=com.github.plugarut.pwned-checker
 Terminal=false
 Type=Application
 X-GNOME-Gettext-Domain=com.github.plugarut.pwned-checker
-Keywords=Password;Privacy;
+Keywords=Password;Privacy;Security;
