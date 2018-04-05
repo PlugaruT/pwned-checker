@@ -40,6 +40,14 @@ namespace PwnedChecker {
             window_position = Gtk.WindowPosition.CENTER;
 
             api = new PwnedChecker.Services.PwnedAPI ();
+            api.start_loading.connect (
+                ()=>{
+                    spinner.start ();
+                });
+            api.end_loading.connect (
+                ()=>{
+                    spinner.stop ();
+                });
 
             var layout = new Gtk.Grid ();
             layout.hexpand = true;
