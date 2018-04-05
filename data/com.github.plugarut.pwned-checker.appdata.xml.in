@@ -106,4 +106,5 @@
   </content_rating>
   <developer_name>Tudor Plugaru</developer_name>
   <url type="homepage">https://github.com/PlugaruT/pwned-checker</url>
+  <url type="bugtracker">https://github.com/PlugaruT/pwned-checker/issues</url>
 </component>
