@@ -39,50 +39,53 @@ namespace PwnedChecker.Services {
             var pwned_count = -1;
             var url = "%spwnedpassword/%s".printf (base_url, password);
             var message = new Soup.Message ("GET", url);
-            session.send_message (message);
-            if (message.status_code == 200) {
-                end_loading ();
-                pwned_count = int.parse ((string)message.response_body.flatten ().data);
-            }
-                end_loading ();
+            session.queue_message (message, (session, res) => {
+                                       end_loading ();
+                                       if (res.status_code == 200) {
+                                           pwned_count = int.parse ((string)res.response_body.flatten ().data);
+                                       }
+                                       end_loading ();
+                                   });
             return pwned_count;
         }
 
         public string[] check_account (string email) {
-            start_loading ();
+                                       start_loading ();
             string[] response = { };
 
             var url = "https://haveibeenpwned.com/api/v2/breachedaccount/%s?truncateResponse=true".printf (email);
             var message = new Soup.Message ("GET", url);
-            session.send_message (message);
 
-            if (message.status_code == 200) {
-                end_loading ();
-                var parser = new Json.Parser ();
-                try {
-                    parser.load_from_data ((string)message.response_body.flatten ().data, -1);
-                } catch (Error e) {
-                    warning ("Failed to connect to service: %s", e.message);
-                }
+            session.queue_message (message, (session, res) => {
+                                       start_loading ();
+                                       if (res.status_code == 200) {
+                                           var parser = new Json.Parser ();
+                                           try {
+                                               parser.load_from_data ((string)res.response_body.flatten ().data, -1);
+                                           } catch (Error e) {
+                                               warning ("Failed to connect to service: %s", e.message);
+                                           }
 
-                var root = parser.get_root ();
-                var array = root.get_array ();
+                                           var root = parser.get_root ();
+                                           var array = root.get_array ();
 
-                for (var i = 0; i < array.get_length (); i++) {
-                    // Get the nth object, skipping unexpected elements
-                    var node = array.get_element (i);
-                    if (node.get_node_type () != Json.NodeType.OBJECT) {
-                        continue;
-                    }
+                                           for (var i = 0; i < array.get_length (); i++) {
+                                               // Get the nth object, skipping unexpected elements
+                                               var node = array.get_element (i);
+                                               if (node.get_node_type () != Json.NodeType.OBJECT) {
+                                                   continue;
+                                               }
 
-                    var object = node.get_object ();
-                    var name = object.get_string_member ("Name");
-                    if (name != null) {
-                        response += name;
-                    }
-                }
-            }
-            end_loading ();
+                                               var object = node.get_object ();
+                                               var name = object.get_string_member ("Name");
+                                               if (name != null) {
+                                                   response += name;
+                                               }
+                                           }
+                                       }
+
+                                       end_loading ();
+                                   });
             return response;
         }
     }
