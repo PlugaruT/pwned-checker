@@ -23,24 +23,35 @@ namespace PwnedChecker.Services {
     public class PwnedAPI : GLib.Object {
         public Soup.Session session;
 
-        private string base_url;
+        private string password_url;
+        private string account_url;
 
         construct {
             session = new Soup.Session ();
             session.user_agent = "com.github.plugarut.pwned-checker";
-            base_url = "https://api.pwnedpasswords.com/";
+            password_url= "https://api.pwnedpasswords.com/range/";
+            account_url = "https://haveibeenpwned.com/api/v2/breachedaccount/";
         }
 
 
         public async int check_password (string password) {
             int pwned_count = -1;
-            string hash =password;
-            string url = "https://api.pwnedpasswords.com/range/%s".printf (hash);
+            string hash = Checksum.compute_for_string (ChecksumType.SHA1, password).up ();
+            string url = "%s%s".printf (password_url, hash.slice (0, 5));
             Soup.Message message = new Soup.Message ("GET", url);
 
             session.queue_message (message, (session, res) => {
                                        if (res.status_code == 200) {
-                                           pwned_count = int.parse ((string)res.response_body.flatten ().data);
+                                           string response = (string)res.response_body.flatten ().data;
+                                           var hash_list = response.split ("\n");
+                                           for (var i = 0; i < hash_list.length; i++) {
+                                               var hash_and_count = hash_list[i].split (":");
+                                               var full_hash = hash.slice (0, 5) + hash_and_count[0];
+                                               if (full_hash == hash) {
+                                                   pwned_count = int.parse (hash_and_count[1]);
+                                                   break;
+                                               }
+                                           };
                                        }
                                        this.check_password.callback ();
                                    });
@@ -51,7 +62,7 @@ namespace PwnedChecker.Services {
         public async string[] check_account (string email) {
             string[] response = { };
 
-            var url = "https://haveibeenpwned.com/api/v2/breachedaccount/%s?truncateResponse=true".printf (email);
+            var url = "%s%s?truncateResponse=true".printf (account_url, email);
             var message = new Soup.Message ("GET", url);
 
             session.queue_message (message, (session, res) => {

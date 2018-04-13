@@ -1,10 +1,11 @@
 com.github.plugarut.pwned-checker (0.1.8) xenial; urgency=medium
 
   * Animate spinner when doing HTTP requests.
+  * Implement password searching by SHA-1.
   * Improve application icon.
   * Bug fixes.
 
- -- Tudor Plugaru <plugaru.tudor@gmail.com>  Mon, 04 Apr 2018  12:45:00 +0300
+ -- Tudor Plugaru <plugaru.tudor@gmail.com>  Mon, 13 Apr 2018  12:45:00 +0300
 
 com.github.plugarut.pwned-checker (0.1.7) xenial; urgency=medium
 

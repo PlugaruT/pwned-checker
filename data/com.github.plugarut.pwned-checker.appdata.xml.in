@@ -13,10 +13,11 @@
     <binary>com.github.plugarut.pwned-checker</binary>
   </provides>
   <releases>
-    <release version="0.1.8" date="2018-04-06">
+    <release version="0.1.8" date="2018-04-13">
       <description>
         <ul>
             <li>Animate spinner when doing HTTP requests.</li>
+            <li>Implement password searching by SHA-1.</li>
             <li>Improve application icon.</li>
             <li>Bug fixes.</li>
         </ul>
