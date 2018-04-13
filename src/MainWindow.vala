@@ -105,21 +105,27 @@ namespace PwnedChecker {
         }
 
         private void check_password () {
-            var response = api.check_password (password_row.get_password ());
-            if (response > 0) {
-                password_row.danger (response);
-            } else {
-                password_row.ok ();
-            }
+            api.check_password.begin (password_row.get_password (),
+                                      (obj, res) => {
+                                          int response = api.check_password.end (res);
+                                          if (response > 0) {
+                                              password_row.danger (response);
+                                          } else {
+                                              password_row.ok ();
+                                          }
+                                      });
         }
 
         private void check_account () {
-            var response = api.check_account (account_row.get_account ());
-            if (response.length > 0) {
-                account_row.danger (response);
-            } else {
-                account_row.ok ();
-            }
+            api.check_account.begin (account_row.get_account (),
+                                     (obj, res) => {
+                                         var response = api.check_account.end (res);
+                                         if (response.length > 0) {
+                                             account_row.danger (response);
+                                         } else {
+                                             account_row.ok ();
+                                         }
+                                     });
         }
     }
 }

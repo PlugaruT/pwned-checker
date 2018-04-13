@@ -34,30 +34,30 @@ namespace PwnedChecker.Services {
         }
 
 
-        public int check_password (string password) {
-            start_loading ();
+        public async int check_password (string password) {
             var pwned_count = -1;
             var url = "%spwnedpassword/%s".printf (base_url, password);
             var message = new Soup.Message ("GET", url);
+            start_loading ();
             session.queue_message (message, (session, res) => {
-                                       end_loading ();
                                        if (res.status_code == 200) {
                                            pwned_count = int.parse ((string)res.response_body.flatten ().data);
                                        }
-                                       end_loading ();
+                                      this.check_password.callback ();
                                    });
+            end_loading ();
+            yield;
             return pwned_count;
         }
 
-        public string[] check_account (string email) {
-                                       start_loading ();
+        public async string[] check_account (string email) {
             string[] response = { };
 
             var url = "https://haveibeenpwned.com/api/v2/breachedaccount/%s?truncateResponse=true".printf (email);
             var message = new Soup.Message ("GET", url);
 
+            start_loading ();
             session.queue_message (message, (session, res) => {
-                                       start_loading ();
                                        if (res.status_code == 200) {
                                            var parser = new Json.Parser ();
                                            try {
@@ -83,9 +83,10 @@ namespace PwnedChecker.Services {
                                                }
                                            }
                                        }
-
-                                       end_loading ();
+                                       this.check_account.callback ();
                                    });
+            end_loading ();
+            yield;
             return response;
         }
     }
