@@ -21,8 +21,6 @@
 
 namespace PwnedChecker.Services {
     public class PwnedAPI : GLib.Object {
-        public signal bool start_loading ();
-        public signal bool end_loading ();
         public Soup.Session session;
 
         private string base_url;
@@ -35,17 +33,17 @@ namespace PwnedChecker.Services {
 
 
         public async int check_password (string password) {
-            var pwned_count = -1;
-            var url = "%spwnedpassword/%s".printf (base_url, password);
-            var message = new Soup.Message ("GET", url);
-            start_loading ();
+            int pwned_count = -1;
+            string hash =password;
+            string url = "https://api.pwnedpasswords.com/range/%s".printf (hash);
+            Soup.Message message = new Soup.Message ("GET", url);
+
             session.queue_message (message, (session, res) => {
                                        if (res.status_code == 200) {
                                            pwned_count = int.parse ((string)res.response_body.flatten ().data);
                                        }
-                                      this.check_password.callback ();
+                                       this.check_password.callback ();
                                    });
-            end_loading ();
             yield;
             return pwned_count;
         }
@@ -56,7 +54,6 @@ namespace PwnedChecker.Services {
             var url = "https://haveibeenpwned.com/api/v2/breachedaccount/%s?truncateResponse=true".printf (email);
             var message = new Soup.Message ("GET", url);
 
-            start_loading ();
             session.queue_message (message, (session, res) => {
                                        if (res.status_code == 200) {
                                            var parser = new Json.Parser ();
@@ -85,7 +82,6 @@ namespace PwnedChecker.Services {
                                        }
                                        this.check_account.callback ();
                                    });
-            end_loading ();
             yield;
             return response;
         }

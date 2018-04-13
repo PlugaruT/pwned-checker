@@ -40,14 +40,6 @@ namespace PwnedChecker {
             window_position = Gtk.WindowPosition.CENTER;
 
             api = new PwnedChecker.Services.PwnedAPI ();
-            api.start_loading.connect (
-                ()=>{
-                    spinner.start ();
-                });
-            api.end_loading.connect (
-                ()=>{
-                    spinner.stop ();
-                });
 
             var layout = new Gtk.Grid ();
             layout.hexpand = true;
@@ -105,24 +97,30 @@ namespace PwnedChecker {
         }
 
         private void check_password () {
+            spinner.start ();
             api.check_password.begin (password_row.get_password (),
                                       (obj, res) => {
                                           int response = api.check_password.end (res);
                                           if (response > 0) {
+                                              spinner.stop ();
                                               password_row.danger (response);
                                           } else {
+                                              spinner.stop ();
                                               password_row.ok ();
                                           }
                                       });
         }
 
         private void check_account () {
+            spinner.start ();
             api.check_account.begin (account_row.get_account (),
                                      (obj, res) => {
                                          var response = api.check_account.end (res);
                                          if (response.length > 0) {
+                                             spinner.stop ();
                                              account_row.danger (response);
                                          } else {
+                                             spinner.stop ();
                                              account_row.ok ();
                                          }
                                      });
