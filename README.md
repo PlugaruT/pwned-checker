@@ -40,6 +40,3 @@ To install, use `ninja install`
 sudo ninja install
 ```
 
-## TODO
-Things I plan to implement:
- - Searching password by range using SHA-1
