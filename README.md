@@ -20,6 +20,8 @@ You'll need the following dependencies:
 ```
 libglib2.0-dev
 libgranite-dev
+libsoup2.4-dev 
+libjson-glib-dev
 libgtk-3-dev
 meson
 valac
