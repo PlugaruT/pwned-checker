@@ -34,7 +34,7 @@ namespace PwnedChecker {
             var quit_action = new SimpleAction ("quit", null);
 
             add_action (quit_action);
-            add_accelerator ("Escape", "app.quit", null);
+            set_accels_for_action ("app.quit", {"Escape"});
 
             quit_action.activate.connect (() => {
                                               if (app_window != null) {
