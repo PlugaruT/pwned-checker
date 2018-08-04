@@ -26,7 +26,6 @@ namespace PwnedChecker {
                     flags : ApplicationFlags.FLAGS_NONE);
         }
 
-
         protected override void activate () {
             var app_window = new MainWindow (this);
             app_window.show_all ();

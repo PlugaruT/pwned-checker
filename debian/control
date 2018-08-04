@@ -10,7 +10,6 @@ Build-Depends: meson,
                libgranite-dev (>= 0.3.0),
                libsoup2.4-dev (>= 2.25.2),
                libjson-glib-dev (>= 0.10)
-               
 
 Standards-Version: 3.9.3
 Package: com.github.plugarut.pwned-checker
