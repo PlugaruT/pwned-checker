@@ -16,4 +16,4 @@ override_dh_auto_test:
 	cd debian/build && ninja test
 
 override_dh_auto_install:
-	cd debian/build && DESTDIR=${CURDIR}/debian/com.github.plugarut.pwned-checker ninja install
+	cd debian/build && DESTDIR=${CURDIR}/debian/com.github.plugarut.pwned_checker ninja install

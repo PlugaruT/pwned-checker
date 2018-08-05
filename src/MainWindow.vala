@@ -29,7 +29,7 @@ namespace PwnedChecker {
         private Gtk.Button check_button;
 
         public MainWindow (Gtk.Application application) {
-            Object (application: application, border_width: 0, icon_name: "com.github.plugarut.pwned-checker", resizable: false, title: _ ("Pwned Checker"), window_position: Gtk.WindowPosition.CENTER);
+            Object (application: application, border_width: 0, icon_name: "com.github.plugarut.pwned_checker", resizable: false, title: _ ("Pwned Checker"), window_position: Gtk.WindowPosition.CENTER);
         }
 
         construct {
