@@ -1,4 +1,4 @@
-project('com.github.plugarut.pwned_checker', 'vala', 'c')
+project('com.github.plugarut.pwned-checker', 'vala', 'c')
 
 gnome = import('gnome')
 i18n = import('i18n')

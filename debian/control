@@ -1,4 +1,4 @@
-Source: com.github.plugarut.pwned_checker
+Source: com.github.plugarut.pwned-checker
 Section: x11
 Priority: extra
 Maintainer: Tudor Plugaru <plugaru.tudor@gmail.com>
@@ -12,7 +12,7 @@ Build-Depends: meson,
                libjson-glib-dev (>= 0.10)
 
 Standards-Version: 3.9.3
-Package: com.github.plugarut.pwned_checker
+Package: com.github.plugarut.pwned-checker
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: Simple application to check if a password was leaked online.

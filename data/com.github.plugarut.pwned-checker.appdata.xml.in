@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2018 Tudor Plugaru <plugaru.tudor@gmail.com> -->
 <component type="desktop">
-  <id>com.github.plugarut.pwned_checker.desktop</id>
+  <id>com.github.plugarut.pwned-checker.desktop</id>
   <metadata_license>CC0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>Pwned Checker</name>
@@ -10,7 +10,7 @@
     <p>Simple application for checking if a password has appeared in a leak. haveibeenpwned.com database is used.</p>
   </description>
   <provides>
-    <binary>com.github.plugarut.pwned_checker</binary>
+    <binary>com.github.plugarut.pwned-checker</binary>
   </provides>
   <releases>
     <release version="0.1.8" date="2018-04-13">
