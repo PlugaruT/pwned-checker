@@ -22,7 +22,7 @@
 namespace PwnedChecker {
     public class PwnedCheckerApp : Gtk.Application {
         public PwnedCheckerApp () {
-            Object (application_id: "com.github.plugarut.pwned_checker",
+            Object (application_id: "com.github.plugarut.pwned-checker",
                     flags : ApplicationFlags.FLAGS_NONE);
         }
 
