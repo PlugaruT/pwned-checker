@@ -13,6 +13,15 @@
     <binary>com.github.plugarut.pwned-checker</binary>
   </provides>
   <releases>
+    <release version="0.2.1" date="2018-10-18">
+      <description>
+        <h2>Juno Release</h2>
+        <ul>
+            <li>Juno Release</li>
+            <li>Bug fixes.</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.1.8" date="2018-04-13">
       <description>
         <ul>
