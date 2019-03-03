@@ -15,6 +15,15 @@
     <binary>com.github.plugarut.pwned-checker</binary>
   </provides>
   <releases>
+    <release version="0.2.3" date="2019-03-03">
+      <description>
+        <ul>
+            <li>Add French translations</li>
+            <li>Translate application description in AppCenter</li>
+            <li>Handle bad response from API</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.2.2" date="2019-03-03">
       <description>
         <ul>
