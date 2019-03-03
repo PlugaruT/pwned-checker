@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.plugarut.pwned-checker\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-03 19:04+0200\n"
+"POT-Creation-Date: 2019-03-03 20:51+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,7 +24,7 @@ msgid "Pwned Checker"
 msgstr ""
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:8
-msgid "Check if your password has been leaked."
+msgid "Check if your password has been leaked"
 msgstr ""
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:10

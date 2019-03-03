@@ -5,7 +5,7 @@
   <metadata_license>CC0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>Pwned Checker</name>
-  <summary>Check if your password has been leaked.</summary>
+  <summary>Check if your password has been leaked</summary>
   <description>
     <p>Simple application for checking if a password has appeared in a leak. haveibeenpwned.com database is used.</p>
   </description>

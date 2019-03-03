@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.plugarut.pwned-checker\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-03 19:04+0200\n"
+"POT-Creation-Date: 2019-03-03 20:51+0200\n"
 "PO-Revision-Date: 2019-03-03 19:07+0100\n"
 "Last-Translator: NathanBnm\n"
 "Language-Team: Français\n"
@@ -24,7 +24,8 @@ msgid "Pwned Checker"
 msgstr "Pwned Checker"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:8
-msgid "Check if your password has been leaked."
+#, fuzzy
+msgid "Check if your password has been leaked"
 msgstr "Vérifiez si votre mot de passe n'a pas été dévoilé"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:10
@@ -32,8 +33,8 @@ msgid ""
 "Simple application for checking if a password has appeared in a leak. "
 "haveibeenpwned.com database is used."
 msgstr ""
-"Une simple application pour vérifier si un mot de passe est apparu dans une fuite. "
-"La base de données haveibeenpwned.com est utilisée."
+"Une simple application pour vérifier si un mot de passe est apparu dans une "
+"fuite. La base de données haveibeenpwned.com est utilisée."
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:21
 msgid "Add French translations"
