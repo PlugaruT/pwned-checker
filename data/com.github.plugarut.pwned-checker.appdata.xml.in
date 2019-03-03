@@ -9,6 +9,8 @@
   <description>
     <p>Simple application for checking if a password has appeared in a leak. haveibeenpwned.com database is used.</p>
   </description>
+  <translation type="gettext">com.github.plugarut.pwned-checker</translation>
+  <launchable type="desktop-id">com.github.plugarut.pwned-checker.desktop</launchable>
   <provides>
     <binary>com.github.plugarut.pwned-checker</binary>
   </provides>

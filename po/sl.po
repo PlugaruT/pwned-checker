@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.plugarut.pwned-checker\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-02 23:28+0300\n"
+"POT-Creation-Date: 2019-03-03 19:04+0200\n"
 "PO-Revision-Date: 2018-03-16 18:55+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -18,11 +18,108 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
 "%100==4 ? 2 : 3);\n"
 
-#: src/MainWindow.vala:39
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:7
+#: data/com.github.plugarut.pwned-checker.desktop.in:3
+#: data/com.github.plugarut.pwned-checker.desktop.in:4 src/MainWindow.vala:32
 msgid "Pwned Checker"
 msgstr ""
 
-#: src/MainWindow.vala:59
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:8
+msgid "Check if your password has been leaked."
+msgstr ""
+
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:10
+msgid ""
+"Simple application for checking if a password has appeared in a leak. "
+"haveibeenpwned.com database is used."
+msgstr ""
+
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:21
+msgid "Add French translations"
+msgstr ""
+
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:22
+msgid "Bug fixes"
+msgstr ""
+
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:28
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:30
+msgid "Juno Release"
+msgstr ""
+
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:31
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:41
+msgid "Bug fixes."
+msgstr ""
+
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:38
+msgid "Animate spinner when doing HTTP requests."
+msgstr ""
+
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:39
+msgid "Implement password searching by SHA-1."
+msgstr ""
+
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:40
+msgid "Improve application icon."
+msgstr ""
+
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:48
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:57
+msgid "Fix appdata file."
+msgstr ""
+
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:49
+msgid "Update screenshots."
+msgstr ""
+
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:55
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:63
+msgid "Initial Release to AppCenter"
+msgstr ""
+
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:65
+msgid "Check password or email."
+msgstr ""
+
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:71
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:79
+msgid "Fixes"
+msgstr ""
+
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:73
+msgid "Fix missing dependencies."
+msgstr ""
+
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:81
+msgid "Fix bug in debian files."
+msgstr ""
+
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:87
+msgid "Add app icon"
+msgstr ""
+
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:92
+msgid "First Release"
+msgstr ""
+
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:136
+msgid "Tudor Plugaru"
+msgstr ""
+
+#: data/com.github.plugarut.pwned-checker.desktop.in:5
+msgid "Application for interacting with haveibeenpwned.com API"
+msgstr ""
+
+#: data/com.github.plugarut.pwned-checker.desktop.in:8
+msgid "com.github.plugarut.pwned-checker"
+msgstr ""
+
+#: data/com.github.plugarut.pwned-checker.desktop.in:12
+msgid "Password;Privacy;Security;"
+msgstr ""
+
+#: src/MainWindow.vala:53
 msgid "Check!"
 msgstr ""
 
@@ -34,12 +131,12 @@ msgstr ""
 msgid "Password"
 msgstr ""
 
-#: src/Widgets/PasswordRow.vala:62
+#: src/Widgets/PasswordRow.vala:67
 #, c-format
 msgid "Your password was pwned %s times!"
 msgstr ""
 
-#: src/Widgets/PasswordRow.vala:67
+#: src/Widgets/PasswordRow.vala:72
 msgid "You can stay calm, the password is good!"
 msgstr ""
 
@@ -51,12 +148,12 @@ msgstr ""
 msgid "Email"
 msgstr ""
 
-#: src/Widgets/AccountRow.vala:56
+#: src/Widgets/AccountRow.vala:60
 #, c-format
 msgid "Your account was involved in %s breaches!"
 msgstr ""
 
-#: src/Widgets/AccountRow.vala:62
+#: src/Widgets/AccountRow.vala:66
 msgid "Congratulations, you were carefully enough !"
 msgstr ""
 

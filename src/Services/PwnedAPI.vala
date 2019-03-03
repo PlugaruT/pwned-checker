@@ -52,6 +52,8 @@ namespace PwnedChecker.Services {
                                                    break;
                                                }
                                            };
+                                       } else {
+                                           pwned_count = -2;
                                        }
                                        this.check_password.callback ();
                                    });

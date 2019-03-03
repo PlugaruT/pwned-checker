@@ -99,8 +99,12 @@ namespace PwnedChecker {
                                               spinner.stop ();
                                               password_row.danger (response);
                                           } else {
-                                              spinner.stop ();
-                                              password_row.ok ();
+                                             spinner.stop ();
+                                             if (response == -2) {
+                                                password_row.info ();
+                                             } else {
+                                                password_row.ok ();
+                                             }
                                           }
                                       });
         }
@@ -111,11 +115,10 @@ namespace PwnedChecker {
                                      (obj, res) => {
                                          var response = api.check_account.end (res);
                                          if (response.length > 0) {
+                                            spinner.stop ();
                                             if (response[0] == "Invalid Response"){
-                                                spinner.stop();
                                                 account_row.info();
                                             } else {
-                                                spinner.stop ();
                                                 account_row.danger (response);
                                             }
                                          } else {
