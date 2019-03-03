@@ -91,6 +91,9 @@ namespace PwnedChecker.Services {
                                                }
                                            }
                                        }
+                                       else {
+		                                    response += "Invalid Response";
+                                       }
                                        this.check_account.callback ();
                                    });
             yield;

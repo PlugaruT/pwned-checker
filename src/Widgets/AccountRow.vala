@@ -51,6 +51,10 @@ namespace PwnedChecker.Widgets {
             attach (label, 1, 2, 1, 1);
         }
 
+        public void info () {
+            label.set_label ("There are some problems with the API calls. Please contant the developer!");
+        }
+
         public void danger (string[] breaches) {
             icon.icon_name = PwnedChecker.Constants.Icons.DANGER.icon ();
             label.set_label (_ ("Your account was involved in %s breaches!").printf (breaches.length.to_string ()));

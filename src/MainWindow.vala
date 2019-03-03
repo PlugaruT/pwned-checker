@@ -111,8 +111,13 @@ namespace PwnedChecker {
                                      (obj, res) => {
                                          var response = api.check_account.end (res);
                                          if (response.length > 0) {
-                                             spinner.stop ();
-                                             account_row.danger (response);
+                                            if (response[0] == "Invalid Response"){
+                                                spinner.stop();
+                                                account_row.info();
+                                            } else {
+                                                spinner.stop ();
+                                                account_row.danger (response);
+                                            }
                                          } else {
                                              spinner.stop ();
                                              account_row.ok ();
