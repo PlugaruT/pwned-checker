@@ -1,3 +1,9 @@
+com.github.plugarut.pwned-checker (0.2.2) xenial; urgency=medium
+
+  * French translations
+
+ -- Tudor Plugaru <plugaru.tudor@gmail.com>  Mon, 13 Apr 2018  12:45:00 +0300
+
 com.github.plugarut.pwned-checker (0.2.1) xenial; urgency=medium
 
   * Release for Juno
