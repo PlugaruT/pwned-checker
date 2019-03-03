@@ -1,3 +1,9 @@
+com.github.plugarut.pwned-checker (0.2.1) xenial; urgency=medium
+
+  * Release for Juno
+
+ -- Tudor Plugaru <plugaru.tudor@gmail.com>  Mon, 13 Apr 2018  12:45:00 +0300
+
 com.github.plugarut.pwned-checker (0.1.8) xenial; urgency=medium
 
   * Animate spinner when doing HTTP requests.
@@ -6,42 +12,3 @@ com.github.plugarut.pwned-checker (0.1.8) xenial; urgency=medium
   * Bug fixes.
 
  -- Tudor Plugaru <plugaru.tudor@gmail.com>  Mon, 13 Apr 2018  12:45:00 +0300
-
-com.github.plugarut.pwned-checker (0.1.7) xenial; urgency=medium
-
-  * Fix appdata file
-  * Update screenshots
-  * Prepare for release in AppCenter
-
- -- Tudor Plugaru <plugaru.tudor@gmail.com>  Mon, 31 Mar 2018  19:45:00 +0300
-
-com.github.plugarut.pwned-checker (0.1.6) xenial; urgency=medium
-
-  * Fix appdata file
-
- -- Tudor Plugaru <plugaru.tudor@gmail.com>  Mon, 30 Mar 2018  19:45:00 +0300
-
-com.github.plugarut.pwned-checker (0.1.5) xenial; urgency=medium
-
-  * Prepare for release in AppCenter
-
- -- Tudor Plugaru <plugaru.tudor@gmail.com>  Mon, 30 Mar 2018  19:30:00 +0300
-
-com.github.plugarut.pwned-checker (0.1.4) xenial; urgency=medium
-
-  * Prepare for release in AppCenter
-
- -- Tudor Plugaru <plugaru.tudor@gmail.com>  Mon, 30 Mar 2018  19:00:00 +0300
-
-
-com.github.plugarut.pwned-checker (0.1.1) xenial; urgency=medium
-
-  * Fix dependency
-
- -- Tudor Plugaru <plugaru.tudor@gmail.com>  Mon, 30 Mar 2018  18:45:00 +0300
-
-com.github.plugarut.pwned-checker (0.1.0) xenial; urgency=medium
-
-  * Initial release.
-
- -- Tudor Plugaru <plugaru.tudor@gmail.com>  Mon, 30 Mar 2018  17:45:00 +0300
