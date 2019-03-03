@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/PlugaruT/pwned-checker.svg?branch=master)](https://travis-ci.org/PlugaruT/pwned-checker)
 
 <p align="center">
-  <img src="https://cdn.rawgit.com/PlugaruT/pwned-checker/master/data/icons/128/com.github.plugarut.pwned-checker.svg" alt="Icon" />
+  <img src="https://github.com/PlugaruT/pwned-checker/blob/master/data/icons/128/com.github.plugarut.pwned-checker.svg"/>
 </p>
 <h1 align="center">Pwned Checker</h1>
 <p align="center">
