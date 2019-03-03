@@ -57,7 +57,7 @@ msgstr "Votre compte a été impliqué dans %s failles de sécurité !"
 
 #: src/Widgets/AccountRow.vala:62
 msgid "Congratulations, you were carefully enough !"
-msgstr "Félécitations, vous avez été assez prudent !"
+msgstr "Félicitations, vous avez été assez prudent !"
 
 #: src/Widgets/HeaderRow.vala:31
 msgid ""
