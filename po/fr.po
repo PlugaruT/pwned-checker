@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.plugarut.pwned-checker\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-03 19:04+0200\n"
-"PO-Revision-Date: 2019-01-16 22:07+0100\n"
+"PO-Revision-Date: 2019-03-03 19:07+0100\n"
 "Last-Translator: NathanBnm\n"
 "Language-Team: Français\n"
 "Language: fr\n"
@@ -25,98 +25,100 @@ msgstr "Pwned Checker"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:8
 msgid "Check if your password has been leaked."
-msgstr ""
+msgstr "Vérifiez si votre mot de passe n'a pas été dévoilé"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:10
 msgid ""
 "Simple application for checking if a password has appeared in a leak. "
 "haveibeenpwned.com database is used."
 msgstr ""
+"Une simple application pour vérifier si un mot de passe est apparu dans une fuite. "
+"La base de données haveibeenpwned.com est utilisée."
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:21
 msgid "Add French translations"
-msgstr ""
+msgstr "Ajout des traductions françaises"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:22
 msgid "Bug fixes"
-msgstr ""
+msgstr "Corrections de bugs"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:28
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:30
 msgid "Juno Release"
-msgstr ""
+msgstr "Version pour Juno"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:31
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:41
 msgid "Bug fixes."
-msgstr ""
+msgstr "Corrections de bugs"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:38
 msgid "Animate spinner when doing HTTP requests."
-msgstr ""
+msgstr "Animation de l'icône de chargement lors des requêtes HTTP"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:39
 msgid "Implement password searching by SHA-1."
-msgstr ""
+msgstr "Implémentation de la recherche de mot de passe par SHA-1"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:40
 msgid "Improve application icon."
-msgstr ""
+msgstr "Amélioration de l'icône d'application"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:48
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:57
 msgid "Fix appdata file."
-msgstr ""
+msgstr "Correction du fichier appdata"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:49
 msgid "Update screenshots."
-msgstr ""
+msgstr "Mises à jour des captures d'écran"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:55
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:63
 msgid "Initial Release to AppCenter"
-msgstr ""
+msgstr "Version initiale pour le Centre d'Applications"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:65
 msgid "Check password or email."
-msgstr ""
+msgstr "Vérifiez un mot de passe ou un email"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:71
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:79
 msgid "Fixes"
-msgstr ""
+msgstr "Corrections"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:73
 msgid "Fix missing dependencies."
-msgstr ""
+msgstr "Corrections des dépendances manquantes"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:81
 msgid "Fix bug in debian files."
-msgstr ""
+msgstr "Correction d'un bug dans les fichiers debian"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:87
 msgid "Add app icon"
-msgstr ""
+msgstr "Ajout de l'icône d'application"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:92
 msgid "First Release"
-msgstr ""
+msgstr "Première version"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:136
 msgid "Tudor Plugaru"
-msgstr ""
+msgstr "Tudor Plugaru"
 
 #: data/com.github.plugarut.pwned-checker.desktop.in:5
 msgid "Application for interacting with haveibeenpwned.com API"
-msgstr ""
+msgstr "Application pour interagir avec l'API de haveibeenpwned.com"
 
 #: data/com.github.plugarut.pwned-checker.desktop.in:8
 msgid "com.github.plugarut.pwned-checker"
-msgstr ""
+msgstr "com.github.plugarut.pwned-checker"
 
 #: data/com.github.plugarut.pwned-checker.desktop.in:12
 msgid "Password;Privacy;Security;"
-msgstr ""
+msgstr "Mot de passe;Confidentialité;Sécurité;"
 
 #: src/MainWindow.vala:53
 msgid "Check!"
