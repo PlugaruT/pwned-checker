@@ -37,16 +37,16 @@
         <h2>Juno Release</h2>
         <ul>
             <li>Juno Release</li>
-            <li>Bug fixes.</li>
+            <li>Bug fixes</li>
         </ul>
       </description>
     </release>
     <release version="0.1.8" date="2018-04-13">
       <description>
         <ul>
-            <li>Animate spinner when doing HTTP requests.</li>
-            <li>Implement password searching by SHA-1.</li>
-            <li>Improve application icon.</li>
+            <li>Animate spinner when doing HTTP requests</li>
+            <li>Implement password searching by SHA-1</li>
+            <li>Improve application icon</li>
             <li>Bug fixes.</li>
         </ul>
       </description>
@@ -54,8 +54,8 @@
     <release version="0.1.7" date="2018-03-31">
      <description>
        <ul>
-           <li>Fix appdata file.</li>
-           <li>Update screenshots.</li>
+           <li>Fix appdata file</li>
+           <li>Update screenshots</li>
        </ul>
      </description>
     </release>
@@ -63,7 +63,7 @@
      <description>
        <p>Initial Release to AppCenter</p>
        <ul>
-           <li>Fix appdata file.</li>
+           <li>Fix appdata file</li>
        </ul>
      </description>
     </release>
@@ -71,7 +71,7 @@
      <description>
        <p>Initial Release to AppCenter</p>
        <ul>
-           <li>Check password or email.</li>
+           <li>Check password or email</li>
        </ul>
      </description>
     </release>
@@ -79,7 +79,7 @@
      <description>
        <p>Fixes</p>
        <ul>
-           <li>Fix missing dependencies.</li>
+           <li>Fix missing dependencies</li>
        </ul>
      </description>
     </release>
@@ -87,7 +87,7 @@
      <description>
        <p>Fixes</p>
        <ul>
-           <li>Fix bug in debian files.</li>
+           <li>Fix bug in debian files</li>
        </ul>
      </description>
     </release>
