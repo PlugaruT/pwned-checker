@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.plugarut.pwned-checker\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-03 20:51+0200\n"
+"POT-Creation-Date: 2019-03-23 14:59+0100\n"
 "PO-Revision-Date: 2018-03-16 18:55+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -34,75 +34,84 @@ msgid ""
 msgstr ""
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:21
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:30
 msgid "Add French translations"
 msgstr ""
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:22
-msgid "Bug fixes"
+msgid "Translate application description in AppCenter"
 msgstr ""
 
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:28
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:30
-msgid "Juno Release"
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:23
+msgid "Handle bad response from API"
 msgstr ""
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:31
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:41
-msgid "Bug fixes."
-msgstr ""
-
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:38
-msgid "Animate spinner when doing HTTP requests."
-msgstr ""
-
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:39
-msgid "Implement password searching by SHA-1."
-msgstr ""
-
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:40
-msgid "Improve application icon."
+msgid "Bug fixes"
+msgstr ""
+
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:37
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:39
+msgid "Juno Release"
+msgstr ""
+
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:47
+msgid "Animate spinner when doing HTTP requests"
 msgstr ""
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:48
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:57
-msgid "Fix appdata file."
+msgid "Implement password searching by SHA-1"
 msgstr ""
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:49
-msgid "Update screenshots."
+msgid "Improve application icon"
 msgstr ""
 
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:55
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:63
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:50
+msgid "Bug fixes."
+msgstr ""
+
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:57
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:66
+msgid "Fix appdata file"
+msgstr ""
+
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:58
+msgid "Update screenshots"
+msgstr ""
+
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:64
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:72
 msgid "Initial Release to AppCenter"
 msgstr ""
 
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:65
-msgid "Check password or email."
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:74
+msgid "Check password or email"
 msgstr ""
 
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:71
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:79
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:80
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:88
 msgid "Fixes"
 msgstr ""
 
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:73
-msgid "Fix missing dependencies."
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:82
+msgid "Fix missing dependencies"
 msgstr ""
 
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:81
-msgid "Fix bug in debian files."
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:90
+msgid "Fix bug in debian files"
 msgstr ""
 
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:87
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:96
 msgid "Add app icon"
 msgstr ""
 
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:92
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:101
 msgid "First Release"
 msgstr ""
 
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:136
+#: data/com.github.plugarut.pwned-checker.appdata.xml.in:145
 msgid "Tudor Plugaru"
 msgstr ""
 
