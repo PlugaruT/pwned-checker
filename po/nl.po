@@ -8,165 +8,163 @@ msgstr ""
 "Project-Id-Version: com.github.plugarut.pwned-checker\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-23 14:59+0100\n"
-"PO-Revision-Date: 2018-03-16 18:55+0200\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2019-03-27 20:26+0100\n"
+"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: none\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ASCII\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.1.1\n"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:7
 #: data/com.github.plugarut.pwned-checker.desktop.in:3
 #: data/com.github.plugarut.pwned-checker.desktop.in:4 src/MainWindow.vala:32
 msgid "Pwned Checker"
-msgstr ""
+msgstr "Pwned Checker"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:8
 msgid "Check if your password has been leaked"
-msgstr ""
+msgstr "Controleer of je wachtwoord uitgelekt is"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:10
-msgid ""
-"Simple application for checking if a password has appeared in a leak. "
-"haveibeenpwned.com database is used."
-msgstr ""
+msgid "Simple application for checking if a password has appeared in a leak. haveibeenpwned.com database is used."
+msgstr "Eenvoudige app om te controleren of je wachtwoord is uitgelekt. Hiervoor wordt gebruikgemaakt van de databank van haveibeenpwned.com."
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:21
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:30
 msgid "Add French translations"
-msgstr ""
+msgstr "Franse vertaling toegevoegd"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:22
 msgid "Translate application description in AppCenter"
-msgstr ""
+msgstr "Appomschrijving in AppCenter is vertaalbaar gemaakt"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:23
 msgid "Handle bad response from API"
-msgstr ""
+msgstr "Afhandeling van verkeerd API-antwoord"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:31
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:40
 msgid "Bug fixes"
-msgstr ""
+msgstr "Foutoplossingen"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:37
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:39
 msgid "Juno Release"
-msgstr ""
+msgstr "Juno-uitgave"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:47
 msgid "Animate spinner when doing HTTP requests"
-msgstr ""
+msgstr "Spinner beweegt tijdens HTTP-verzoeken"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:48
 msgid "Implement password searching by SHA-1"
-msgstr ""
+msgstr "Wachtwoorden zoeken via SHA-1 toegevoegd"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:49
 msgid "Improve application icon"
-msgstr ""
+msgstr "App-pictogram verbeterd"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:50
 msgid "Bug fixes."
-msgstr ""
+msgstr "Foutoplossingen"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:57
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:66
 msgid "Fix appdata file"
-msgstr ""
+msgstr "Appdata-bestand gerepareerd"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:58
 msgid "Update screenshots"
-msgstr ""
+msgstr "Schermafdrukken bijgewerkt"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:64
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:72
 msgid "Initial Release to AppCenter"
-msgstr ""
+msgstr "Initiële uitgave in het AppCenter"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:74
 msgid "Check password or email"
-msgstr ""
+msgstr "Controleer wachtwoord of e-mailadres"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:80
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:88
 msgid "Fixes"
-msgstr ""
+msgstr "Foutoplossingen"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:82
 msgid "Fix missing dependencies"
-msgstr ""
+msgstr "Ontbrekende afhankelijkheden opgelost"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:90
 msgid "Fix bug in debian files"
-msgstr ""
+msgstr "Fout opgelost in Debian-bestanden"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:96
 msgid "Add app icon"
-msgstr ""
+msgstr "App-pictogram toegevoegd"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:101
 msgid "First Release"
-msgstr ""
+msgstr "Eerste uitgave"
 
 #: data/com.github.plugarut.pwned-checker.appdata.xml.in:145
 msgid "Tudor Plugaru"
-msgstr ""
+msgstr "Tudor Plugaru"
 
 #: data/com.github.plugarut.pwned-checker.desktop.in:5
 msgid "Application for interacting with haveibeenpwned.com API"
-msgstr ""
+msgstr "App voor het benaderen van haveibeenpwned.com via de API"
 
 #: data/com.github.plugarut.pwned-checker.desktop.in:8
 msgid "com.github.plugarut.pwned-checker"
-msgstr ""
+msgstr "com.github.plugarut.pwned-checker"
 
 #: data/com.github.plugarut.pwned-checker.desktop.in:12
 msgid "Password;Privacy;Security;"
-msgstr ""
+msgstr "Wachtwoord;Privacy;Beveiliging;"
 
 #: src/MainWindow.vala:53
 msgid "Check!"
-msgstr ""
+msgstr "Controleren!"
 
 #: src/Widgets/PasswordRow.vala:35
 msgid "Enter password to be checked!"
-msgstr ""
+msgstr "Voer het te controleren wachtwoord in!"
 
 #: src/Widgets/PasswordRow.vala:43
 msgid "Password"
-msgstr ""
+msgstr "Wachtwoord"
 
 #: src/Widgets/PasswordRow.vala:67
 #, c-format
 msgid "Your password was pwned %s times!"
-msgstr ""
+msgstr "Je wachtwoord is %s keer uitgelekt!"
 
 #: src/Widgets/PasswordRow.vala:72
 msgid "You can stay calm, the password is good!"
-msgstr ""
+msgstr "Maar weest gerust: het wachtwoord is sterk!"
 
 #: src/Widgets/AccountRow.vala:35
 msgid "Enter email to be checked!"
-msgstr ""
+msgstr "Voer het te controleren e-mailadres in!"
 
 #: src/Widgets/AccountRow.vala:43
 msgid "Email"
-msgstr ""
+msgstr "E-mailadres"
 
 #: src/Widgets/AccountRow.vala:60
 #, c-format
 msgid "Your account was involved in %s breaches!"
-msgstr ""
+msgstr "Je account is %s keer uitgelekt!"
 
 #: src/Widgets/AccountRow.vala:66
 msgid "Congratulations, you were carefully enough !"
-msgstr ""
+msgstr "Gefeliciteerd! Je bent voorzichtig genoeg geweest!"
 
 #: src/Widgets/HeaderRow.vala:31
-msgid ""
-"Please enter password or email you want to be checked on <a "
-"href='haveibeenpwned.com'>haveibeenpwned.com</a>"
-msgstr ""
+msgid "Please enter password or email you want to be checked on <a href='haveibeenpwned.com'>haveibeenpwned.com</a>"
+msgstr "Voer het wachtwoord of e-mailadres in dat je wilt controleren op <a href='haveibeenpwned.com'>haveibeenpwned.com</a>"
+
