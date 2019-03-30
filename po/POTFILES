@@ -1,5 +1,3 @@
-data/com.github.plugarut.pwned-checker.appdata.xml.in
-data/com.github.plugarut.pwned-checker.desktop.in
 src/MainWindow.vala
 src/Application.vala
 src/Widgets/PasswordRow.vala

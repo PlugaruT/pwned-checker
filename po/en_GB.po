@@ -1,14 +1,14 @@
 # English translations for com.github.plugarut.pwned-checker package.
-# Copyright (C) 2018 THE com.github.plugarut.pwned-checker'S COPYRIGHT HOLDER
+# Copyright (C) 2019 THE com.github.plugarut.pwned-checker'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.plugarut.pwned-checker package.
-# Automatically generated, 2018.
+# Automatically generated, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.plugarut.pwned-checker\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-23 14:59+0100\n"
-"PO-Revision-Date: 2018-03-16 18:55+0200\n"
+"POT-Creation-Date: 2019-03-30 09:18+0100\n"
+"PO-Revision-Date: 2019-03-30 09:18+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: en_GB\n"
@@ -17,115 +17,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:7
-#: data/com.github.plugarut.pwned-checker.desktop.in:3
-#: data/com.github.plugarut.pwned-checker.desktop.in:4 src/MainWindow.vala:32
+#: src/MainWindow.vala:32
 msgid "Pwned Checker"
 msgstr "Pwned Checker"
-
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:8
-msgid "Check if your password has been leaked"
-msgstr ""
-
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:10
-msgid ""
-"Simple application for checking if a password has appeared in a leak. "
-"haveibeenpwned.com database is used."
-msgstr ""
-
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:21
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:30
-msgid "Add French translations"
-msgstr ""
-
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:22
-msgid "Translate application description in AppCenter"
-msgstr ""
-
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:23
-msgid "Handle bad response from API"
-msgstr ""
-
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:31
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:40
-msgid "Bug fixes"
-msgstr ""
-
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:37
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:39
-msgid "Juno Release"
-msgstr ""
-
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:47
-msgid "Animate spinner when doing HTTP requests"
-msgstr ""
-
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:48
-msgid "Implement password searching by SHA-1"
-msgstr ""
-
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:49
-msgid "Improve application icon"
-msgstr ""
-
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:50
-msgid "Bug fixes."
-msgstr ""
-
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:57
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:66
-msgid "Fix appdata file"
-msgstr ""
-
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:58
-msgid "Update screenshots"
-msgstr ""
-
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:64
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:72
-msgid "Initial Release to AppCenter"
-msgstr ""
-
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:74
-msgid "Check password or email"
-msgstr ""
-
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:80
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:88
-msgid "Fixes"
-msgstr ""
-
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:82
-msgid "Fix missing dependencies"
-msgstr ""
-
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:90
-msgid "Fix bug in debian files"
-msgstr ""
-
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:96
-msgid "Add app icon"
-msgstr ""
-
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:101
-msgid "First Release"
-msgstr ""
-
-#: data/com.github.plugarut.pwned-checker.appdata.xml.in:145
-msgid "Tudor Plugaru"
-msgstr ""
-
-#: data/com.github.plugarut.pwned-checker.desktop.in:5
-msgid "Application for interacting with haveibeenpwned.com API"
-msgstr ""
-
-#: data/com.github.plugarut.pwned-checker.desktop.in:8
-msgid "com.github.plugarut.pwned-checker"
-msgstr ""
-
-#: data/com.github.plugarut.pwned-checker.desktop.in:12
-msgid "Password;Privacy;Security;"
-msgstr ""
 
 #: src/MainWindow.vala:53
 msgid "Check!"
@@ -140,37 +34,35 @@ msgid "Password"
 msgstr "Password"
 
 #: src/Widgets/PasswordRow.vala:67
-#, fuzzy, c-format
+#, c-format
 msgid "Your password was pwned %s times!"
-msgstr "Youre password was pwned %s times!"
+msgstr "Your password was pwned %s times!"
 
 #: src/Widgets/PasswordRow.vala:72
 msgid "You can stay calm, the password is good!"
 msgstr "You can stay calm, the password is good!"
 
 #: src/Widgets/AccountRow.vala:35
-#, fuzzy
 msgid "Enter email to be checked!"
-msgstr "Enter password to be checked!"
+msgstr "Enter email to be checked!"
 
 #: src/Widgets/AccountRow.vala:43
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: src/Widgets/AccountRow.vala:60
 #, c-format
 msgid "Your account was involved in %s breaches!"
-msgstr ""
+msgstr "Your account was involved in %s breaches!"
 
 #: src/Widgets/AccountRow.vala:66
 msgid "Congratulations, you were carefully enough !"
-msgstr ""
+msgstr "Congratulations, you were carefully enough !"
 
 #: src/Widgets/HeaderRow.vala:31
-#, fuzzy
 msgid ""
 "Please enter password or email you want to be checked on <a "
 "href='haveibeenpwned.com'>haveibeenpwned.com</a>"
 msgstr ""
-"Please enter password you want to be checked on <a href='haveibeenpwned."
-"com'>haveibeenpwned.com</a>"
+"Please enter password or email you want to be checked on <a "
+"href='haveibeenpwned.com'>haveibeenpwned.com</a>"
