@@ -27,9 +27,9 @@
      inkscape:window-height="705"
      id="namedview51"
      showgrid="true"
-     inkscape:zoom="5.6568545"
-     inkscape:cx="23.057124"
-     inkscape:cy="12.119709"
+     inkscape:zoom="8.0000004"
+     inkscape:cx="17.40585"
+     inkscape:cy="26.464277"
      inkscape:window-x="0"
      inkscape:window-y="30"
      inkscape:window-maximized="1"
@@ -669,7 +669,7 @@
        x="3.125"
        y="99.875"
        id="rect5505-21-6"
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.5;fill:none;stroke:#0e141f;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;stroke:#49565e;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.62352943;marker:none;enable-background:accumulate" />
     <path
        inkscape:connector-curvature="0"
        d="m 29.75,125.5 a 13.75,1.5 0 0 1 -27.4999996,0 13.75,1.5 0 1 1 27.4999996,0 z"

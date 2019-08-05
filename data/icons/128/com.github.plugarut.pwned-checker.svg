@@ -27,9 +27,9 @@
      inkscape:window-height="705"
      id="namedview51"
      showgrid="true"
-     inkscape:zoom="5.6568542"
-     inkscape:cx="69.588852"
-     inkscape:cy="91.97499"
+     inkscape:zoom="16"
+     inkscape:cx="121.02293"
+     inkscape:cy="108.03506"
      inkscape:window-x="0"
      inkscape:window-y="30"
      inkscape:window-maximized="1"
@@ -519,7 +519,7 @@
        width="103"
        mask="url(#mask5960)" />
     <rect
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;fill-opacity:0;fill-rule:nonzero;stroke:#4d5b66;stroke-width:0.99999994;marker:none;enable-background:accumulate;stroke-opacity:0.68888891"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;fill-opacity:0;fill-rule:nonzero;stroke:#49565e;stroke-width:0.99999994;marker:none;enable-background:accumulate;stroke-opacity:0.62352943"
        id="rect5986"
        y="15.5"
        x="12.5"
@@ -563,7 +563,7 @@
        id="path126" />
     <g
        id="g1178"
-       transform="translate(-58.516558,6.9652047)">
+       transform="translate(-63.894751,1.9999981)">
       <g
          id="g4178">
         <g
