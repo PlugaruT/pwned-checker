@@ -15,6 +15,13 @@
     <binary>com.github.plugarut.pwned-checker</binary>
   </provides>
   <releases>
+    <release version="0.2.4" date="2019-08-12">
+      <description>
+        <ul>
+            <li>Icon updates</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.2.3" date="2019-03-03">
       <description>
         <ul>
