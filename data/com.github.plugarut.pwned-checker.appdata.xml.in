@@ -41,7 +41,7 @@
     </release>
     <release version="0.2.1" date="2018-10-18">
       <description>
-        <h2>Juno Release</h2>
+        <p>Juno Release</p>
         <ul>
             <li>Juno Release</li>
             <li>Bug fixes</li>
