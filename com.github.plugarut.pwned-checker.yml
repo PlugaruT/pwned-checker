@@ -1,0 +1,26 @@
+---
+app-id: com.github.plugarut.pwned-checker
+runtime: io.elementary.Platform
+sdk: io.elementary.Sdk
+runtime-version: '6'
+command: com.github.plugarut.pwned-checker
+finish-args:
+- "--share=ipc"
+- "--share=network"
+- "--socket=x11"
+- "--socket=wayland"
+cleanup:
+- "/include"
+- "/lib/pkgconfig"
+- "/lib/*.la"
+- "/share/gir-1.0"
+- "/lib/girepository-1.0"
+- "/share/vala"
+- "/share/gtk-doc"
+modules:
+- name: pwned-checker
+  buildsystem: meson
+  sources:
+  - type: dir
+    path: .
+
